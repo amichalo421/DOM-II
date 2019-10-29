@@ -139,7 +139,7 @@
     const kDown = document.querySelector('body');
         kDown.addEventListener('keydown', e => {
         kDown.style.backgroundColor = 'tan';
-        e.stopPropagation();
+        // e.stopPropagation();
     const kUp = document.querySelector('body');
       kUp.addEventListener('keyup', e => {
       kUp.style.backgroundColor = 'white';
