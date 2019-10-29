@@ -65,11 +65,23 @@
 //         });
 
 // // * [ ] `scroll`
-//     const funBus = document.querySelectorAll('img')[0];
-        funBus.addEventListener('dblclick', event => {
-            console.log(`Input detected ${event.target}`);   
-            alert('dblclick the secret funbus'); 
-        });
+
+    //------ random color fxn
+    function random_bg_color() {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+     console.log(bgColor);
+        document.body.style.background = bgColor;
+        }
+    //Event listener
+    window.addEventListener('scroll', function(e) {
+    last_known_scroll_position = window.scrollY;
+    console.log(`JS PARTY`);
+    random_bg_color();
+    }
+    );
 
 // // * [ ] `select`
 //     const button = document.querySelector('button');
@@ -86,6 +98,15 @@
             alert('dblclick the secret funbus'); 
         });
 
+
+//prevented
+
+        // const home = document.querySelectorAll('a')[0];
+        //     console.log(home);
+        //         home.addEventListener('click', (e) => {
+        //             e.preventDefault();
+        //             alert('home prevented');
+        //         });
 
 
 
