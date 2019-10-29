@@ -1,6 +1,6 @@
 // --------- QuerySelectors and Event's --------------
 
-// * [ ] `click`
+// // * [ ] `click`
     const home = document.querySelectorAll('a')[0];
         console.log(home);
             home.addEventListener('click', event => {
@@ -65,31 +65,53 @@
 //         });
 
 // // * [ ] `scroll`
-
-    //------ random color fxn
-    function random_bg_color() {
-        var x = Math.floor(Math.random() * 256);
-        var y = Math.floor(Math.random() * 256);
-        var z = Math.floor(Math.random() * 256);
-        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-     console.log(bgColor);
-        document.body.style.background = bgColor;
-        }
-    //Event listener
-    window.addEventListener('scroll', function(e) {
-    last_known_scroll_position = window.scrollY;
-    console.log(`JS PARTY`);
-    random_bg_color();
-    }
-    );
+    // //------ random color fxn
+    // function random_bg_color() {
+    //     var x = Math.floor(Math.random() * 256);
+    //     var y = Math.floor(Math.random() * 256);
+    //     var z = Math.floor(Math.random() * 256);
+    //     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    //  console.log(bgColor);
+    //     document.body.style.background = bgColor;
+    //     }
+    // //Event listener
+    // window.addEventListener('scroll', function(e) {
+    // console.log(`JS PARTY`);
+    // random_bg_color();
+    // }
+    // );
 
 // // * [ ] `select`
-//     const button = document.querySelector('button');
-//     console.log(navLink);
-//         firstName.addEventListener('select', (e) => {
-//             console.log(e.target.value);
-//             alert('Hello!');
-//         });
+    // Create new input element
+        // 1- Create Element
+        const newInput = document.createElement('input');
+        // 2- Add Content
+        newInput.textContent = 'Hello! What is your name?';
+        // 3- Select Target Parent Element
+        const secondaryContent = document.querySelectorAll('p')[0];
+        // 4- Add Element To Parent
+        secondaryContent.append(newInput);
+
+    // //refer to input and add value class
+    //         newInput.classList.add("value");
+    //         const value = document.querySelector('.value');
+    //         value.
+    // //populate text for value
+    //..
+    // document.getElementById('newInput').value = 'hey';
+    //..
+    // newInput.placeholder = "this is text";
+    newInput.value = "selector text for the select event listener";
+
+        
+
+    const p = document.querySelectorAll('p')[0];
+        console.log(p);
+            p.addEventListener('select', event => {
+                console.log(`Input detected for ${event.target}`);   
+                const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+                alert(`You selected: ${selection}`); 
+            });
 
 // // * [ ] `dblclick
     const funBus = document.querySelectorAll('img')[0];
@@ -107,8 +129,6 @@
         //             e.preventDefault();
         //             alert('home prevented');
         //         });
-
-
 
 
 
