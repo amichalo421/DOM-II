@@ -115,24 +115,42 @@
     })
 
 // Stop Propogation
-    const nav = document.querySelector('.nav');
-    nav.addEventListener('click', event => {
-        nav.style.background = 'purple';
-        console.log('nav');
-        event.stopPropagation();
-        console.log('purple');
-        const navLink = document.querySelectorAll('.nav-link')[2];
-        navLink.addEventListener('click', event => {
-            console.log('yellow')
-            navLink.style.background = 'yellow';
+    // const nav = document.querySelector('.main-navigation');
+    // nav.addEventListener('click', event => {
+    //     nav.style.background = 'purple';
+    //         console.log('nav');
+    //         // event.stopPropagation();
+    //         console.log('purple');
+    //     const navLink = document.querySelectorAll('.nav-link')[2];
+    //     navLink.addEventListener('click', event => {
+    //         console.log('yellow')
+    //         navLink.style.background = 'yellow';
+    //     })
+    // })
 
-            
-        })
+    // const containerHome = document.querySelector('.intro p');
+    //     containerHome.addEventListener('click', e => {
+    //     containerHome.style.backgroundColor = 'gray';
+    //     e.stopPropagation();})
+    // const contentSection = document.querySelector('.content-section');
+    //     contentSection.addEventListener('click', e => {
+    //     contentSection.style.backgroundColor = 'black';
+    //      })
+    const kDown = document.querySelector('body');
+        kDown.addEventListener('keydown', e => {
+        kDown.style.backgroundColor = 'tan';
+        e.stopPropagation();
+    const kUp = document.querySelector('body');
+      kUp.addEventListener('keyup', e => {
+      kUp.style.backgroundColor = 'white';
     })
+})
+
+    
+
 
 
 //prevented
-
         // const home = document.querySelectorAll('a')[0];
         //     console.log(home);
         //         home.addEventListener('click', (e) => {
@@ -141,6 +159,17 @@
         //         });
 
 
+//more
+
+const blocks = document.querySelector('.blocks')
+
+const block = document.querySelectorAll('.block');
+block.forEach(element => {
+  element.addEventListener('click', e => {
+    console.log('block is clicked')
+    element.style.top = '-0px'
+  })
+}) 
 
 
 //------Other future options -------
