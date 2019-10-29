@@ -1,20 +1,98 @@
-// Your code goes here
+// --------- QuerySelectors and Event's --------------
 
-const card = document.querySelector('.card');
-const trade = document.querySelector('button');
-const create = document.querySelector('.form-submit');
-// console.log(trade);
-// console.log(card);
+// * [ ] `mouseover`
+    const firstName = document.querySelector('.first-name');
+    console.log(firstName);
+        firstName.addEventListener('mouseover', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
 
-card.addEventListener('dblclick', (e) => {
-  e.target.style.backgroundColor = 'red';
-});
+// * [ ] `keydown`
+    const navLink = document.querySelector('.nav-link');
+    console.log(navLink);
+        firstName.addEventListener('keydown', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
 
-trade.addEventListener('dblclick', (e) => {
-  e.target.style.backgroundColor = 'blue';
-  e.stopPropagation();
-});
+// * [ ] `wheel`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('wheel', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
 
+// * [ ] `drag / drop`
+    const create = document.querySelector('.form-submit');
+    console.log(navLink);
+        firstName.addEventListener('drag / drop', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+
+// * [ ] `load`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('load', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+    
+// * [ ] `focus`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('focus', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+
+// * [ ] `resize`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('resize', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+
+// * [ ] `scroll`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('scroll', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+
+// * [ ] `select`
+    const button = document.querySelector('button');
+    console.log(navLink);
+        firstName.addEventListener('select', (e) => {
+            console.log(e.target.value);
+            alert('Hello!');
+        });
+
+// * [ ] `dblclick`
+    const button = document.querySelector('button');
+    console.log(navLink);
+      trade.addEventListener('dblclick', (e) => {
+        e.target.style.backgroundColor = 'blue';
+        e.stopPropagation();
+      });
+
+
+
+
+
+
+      
+
+
+
+
+
+
+// ---------- Extra Event's from Previous Cohort Lesson - ----------
 // create.addEventListener('click', (e)=> {
 //   default behavior happens here
 //   then your code happens
@@ -27,12 +105,7 @@ trade.addEventListener('dblclick', (e) => {
 //   console.log(e);
 // });
 
-// const firstName = document.querySelector('.first-name');
-// console.log(firstName);
-// firstName.addEventListener('mouseover', (e) => {
-//   console.log(e.target.value);
-//   alert('Hello!');
-// });
+
 
 // firstName.addEventListener('mouseenter', (e) => {
 //   e.target.style.backgroundColor = 'blue';
