@@ -83,6 +83,7 @@
     const btn = document.querySelectorAll('.btn')[0];
     btn.addEventListener('contextmenu', event => {
         btn.style.height = '500px';
+        btn.style.background = 'purple';
     })
 // * [] `mouseleave`
     const btn2 = document.querySelectorAll('.btn')[1];
@@ -103,7 +104,7 @@
     })
 // * [] `mouseup`
     const btn32 = document.querySelectorAll('.btn')[2];
-    btn32.addEventListener('mousemove', event => {
+    btn32.addEventListener('mouseup', event => {
         console.log(`test`);
         btn.style.width = '600px';
         btn.style.height = '600px';
@@ -112,8 +113,19 @@
         btn3.style.width = '600px';
         btn3.style.height = '600px';
     })
-       
 
+// Stop Propogation
+    const nav = document.querySelector('.nav');
+    nav.addEventListener('click', event => {
+        nav.style.background = 'purple';
+        console.log('nav');
+        const navLink = document.querySelector('.nav-link');
+        navLink.addEventListener('click', event => {
+            console.log('')
+            nav.style.background = 'yellow';
+            // event.stopPropagation();
+        })
+    })
 
 
 //prevented
