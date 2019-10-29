@@ -80,9 +80,38 @@
         });
 
 // * [] `contextmenu`(rightclick)
+    const btn = document.querySelectorAll('.btn')[0];
+    btn.addEventListener('contextmenu', event => {
+        btn.style.height = '500px';
+    })
 // * [] `mouseleave`
+    const btn2 = document.querySelectorAll('.btn')[1];
+    btn2.addEventListener('contextmenu', event => {
+        btn.style.width = '500px';
+    })
+    btn2.addEventListener('mouseleave', event => {
+        console.log(`thisisit`);
+        btn.style.width = '200px';
+        btn.style.height = '100px';
+    })
+
 // * [] `mousemove`
+    const btn3 = document.querySelectorAll('.btn')[2];
+    btn3.addEventListener('mousemove', event => {
+        btn.style.width = '600px';
+        btn.style.background = 'green';
+    })
 // * [] `mouseup`
+    const btn32 = document.querySelectorAll('.btn')[2];
+    btn32.addEventListener('mousemove', event => {
+        console.log(`test`);
+        btn.style.width = '600px';
+        btn.style.height = '600px';
+        btn2.style.width = '600px';
+        btn2.style.height = '600px';
+        btn3.style.width = '600px';
+        btn3.style.height = '600px';
+    })
        
 
 
