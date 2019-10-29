@@ -119,11 +119,14 @@
     nav.addEventListener('click', event => {
         nav.style.background = 'purple';
         console.log('nav');
-        const navLink = document.querySelector('.nav-link');
+        event.stopPropagation();
+        console.log('purple');
+        const navLink = document.querySelectorAll('.nav-link')[2];
         navLink.addEventListener('click', event => {
-            console.log('')
-            nav.style.background = 'yellow';
-            // event.stopPropagation();
+            console.log('yellow')
+            navLink.style.background = 'yellow';
+
+            
         })
     })
 
